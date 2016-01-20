@@ -7,7 +7,7 @@ SSKeychain is a simple wrapper for accessing accounts, getting passwords, settin
 Simply add the following to your Podfile if you're using CocoaPods:
 
 ``` ruby
-pod 'SSKeychain'
+pod 'SSKeychain', :git => 'https://github.com/keyfun/sskeychain.git'
 ```
 
 or Cartfile if you're using Carthage:
