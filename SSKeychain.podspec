@@ -10,5 +10,5 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.frameworks = 'Security', 'Foundation'
-  spec.public_header_files = 'SSKeychain/SSKeychain.h', 'SSKeychain/SSKeychainQuery.h'
+  spec.public_header_files = 'SSKeychain/SSKeychainLibrary.h'
 end
