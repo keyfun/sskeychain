@@ -8,6 +8,11 @@
 
 #import <SSKeychain/SSKeychainQuery.h>
 
+#ifndef _SSKEYCHAIN_
+    #define _SSKEYCHAIN_
+    #import "SSKeychainQuery.h"
+#endif /* _SSKEYCHAIN_ */
+
 /**
  Error code specific to SSKeychain that can be returned in NSError objects.
  For codes returned by the operating system, refer to SecBase.h for your
