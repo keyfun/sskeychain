@@ -6,7 +6,7 @@
 //  Copyright (c) 2010-2014 Sam Soffes. All rights reserved.
 //
 
-#import "SSKeychain.h"
+#import "SSKeychainCore.h"
 
 NSString *const kSSKeychainErrorDomain = @"com.samsoffes.sskeychain";
 NSString *const kSSKeychainAccountKey = @"acct";
@@ -21,7 +21,7 @@ NSString *const kSSKeychainWhereKey = @"svce";
 	static CFTypeRef SSKeychainAccessibilityType = NULL;
 #endif
 
-@implementation SSKeychain
+@implementation SSKeychainCore
 
 + (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account {
 	return [self passwordForService:serviceName account:account error:nil];

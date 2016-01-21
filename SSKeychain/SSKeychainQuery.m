@@ -7,7 +7,7 @@
 //
 
 #import "SSKeychainQuery.h"
-#import "SSKeychain.h"
+#import "SSKeychainCore.h"
 
 @implementation SSKeychainQuery
 
@@ -48,7 +48,7 @@
 		}
 		[query setObject:self.passwordData forKey:(__bridge id)kSecValueData];
 #if __IPHONE_4_0 && TARGET_OS_IPHONE
-		CFTypeRef accessibilityType = [SSKeychain accessibilityType];
+		CFTypeRef accessibilityType = [SSKeychainCore accessibilityType];
 		if (accessibilityType) {
 			[query setObject:(__bridge id)accessibilityType forKey:(__bridge id)kSecAttrAccessible];
 		}
@@ -97,7 +97,7 @@
 	[query setObject:@YES forKey:(__bridge id)kSecReturnAttributes];
 	[query setObject:(__bridge id)kSecMatchLimitAll forKey:(__bridge id)kSecMatchLimit];
 #if __IPHONE_4_0 && TARGET_OS_IPHONE
-	CFTypeRef accessibilityType = [SSKeychain accessibilityType];
+	CFTypeRef accessibilityType = [SSKeychainCore accessibilityType];
 	if (accessibilityType) {
 		[query setObject:(__bridge id)accessibilityType forKey:(__bridge id)kSecAttrAccessible];
 	}
