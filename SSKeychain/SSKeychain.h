@@ -6,6 +6,16 @@
 //  Copyright (c) 2010-2014 Sam Soffes. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import <Availability.h>
+#import <TargetConditionals.h>
+
+#ifndef _SSKEYCHAIN_
+    #define _SSKEYCHAIN_
+    #import "SSKeychainQuery.h"
+ 	#import "SSKeychain.h"
+#endif /* _SSKEYCHAIN_ */
+
 #import <SSKeychain/SSKeychainQuery.h>
 
 /**
